@@ -1,8 +1,11 @@
 # simian-api
 
-> #### `Efetuar verificação de Símio`
+<br>
+
+#### `Efetuar verificação de Símio`
+>`POST`
 >```
->POST /simian
+> /simian
 >```
 >
 >`body`
@@ -22,10 +25,12 @@
 >>      }
 >>    ```
 
+<br>
 
-> #### `Estatísticas de verificações de DNA`
+#### `Estatísticas de verificações de DNA`
+> `GET`
 >```
-> GET /stats
+>  /stats
 >```
 >
 >> `Exemplo de Resposta`
