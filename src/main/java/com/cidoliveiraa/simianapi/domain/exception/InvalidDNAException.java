@@ -1,4 +1,4 @@
-package com.cidoliveiraa.simianapi.exceptions;
+package com.cidoliveiraa.simianapi.domain.exception;
 
 public class InvalidDNAException extends Exception {
   public InvalidDNAException(String message) {

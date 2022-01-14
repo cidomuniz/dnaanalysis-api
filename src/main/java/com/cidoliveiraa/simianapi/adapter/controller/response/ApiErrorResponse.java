@@ -1,4 +1,4 @@
-package com.cidoliveiraa.simianapi.controllers.response;
+package com.cidoliveiraa.simianapi.adapter.controller.response;
 
 import org.springframework.http.HttpStatus;
 

@@ -1,4 +1,4 @@
-package com.cidoliveiraa.simianapi.controllers.request;
+package com.cidoliveiraa.simianapi.adapter.controller.request;
 
 import java.util.List;
 

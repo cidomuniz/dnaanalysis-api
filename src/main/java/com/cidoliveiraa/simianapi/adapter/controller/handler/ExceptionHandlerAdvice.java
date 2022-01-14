@@ -1,7 +1,7 @@
-package com.cidoliveiraa.simianapi.controllers.handler;
+package com.cidoliveiraa.simianapi.adapter.controller.handler;
 
-import com.cidoliveiraa.simianapi.controllers.response.ApiErrorResponse;
-import com.cidoliveiraa.simianapi.exceptions.InvalidDNAException;
+import com.cidoliveiraa.simianapi.adapter.controller.response.ApiErrorResponse;
+import com.cidoliveiraa.simianapi.domain.exception.InvalidDNAException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
