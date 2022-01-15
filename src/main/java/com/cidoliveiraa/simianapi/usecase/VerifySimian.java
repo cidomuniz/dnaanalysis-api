@@ -6,25 +6,40 @@ import java.util.regex.Pattern;
 
 import com.cidoliveiraa.simianapi.domain.entity.DNA;
 import com.cidoliveiraa.simianapi.domain.exception.InvalidDNAException;
+import com.cidoliveiraa.simianapi.usecase.port.DNARepository;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class VerifySimian {
+  @Autowired
+  private DNARepository dnaRepository;
 
   public boolean verify(DNA dna) throws InvalidDNAException {
     dna.validateSequence();
 
+    DNA dnaData = dnaRepository.findBySequence(dna.getSequence());
+    if (!dnaData.isEmpty())
+      return dnaData.isSimian();
+
+    dna.setSimian(isSimian(dna.getSequence()));
+    dnaRepository.save(dna);
+
+    return dna.isSimian();
+  }
+
+  private boolean isSimian(List<String> sequence) {
     int sequenceCount = 0;
     for (int verificationLevel = 1; verificationLevel <= 4; verificationLevel++) {
-      sequenceCount += simianDNAVerification(dna.sequence(), verificationLevel);
+      sequenceCount += simianDNAMatrixVerification(sequence, verificationLevel);
       if (sequenceCount > 1)
         return true;
     }
     return false;
   }
 
-  private int simianDNAVerification(List<String> sequence, int level) {
+  private int simianDNAMatrixVerification(List<String> sequence, int level) {
     switch (level) {
       case 1:
         return countSequencesHorizontally(sequence);

@@ -21,7 +21,8 @@ public class SimianVerificationController {
 
   @PostMapping
   public SimianVerificationResponse verifySimian(@RequestBody SimianVerificationRequest request) throws InvalidDNAException {
-    DNA dna = new DNA(request.dna());
+    DNA dna = new DNA();
+    dna.setSequence(request.dna());
     return new SimianVerificationResponse(verifySimian.verify(dna));
   }
 
