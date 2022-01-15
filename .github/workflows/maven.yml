@@ -39,7 +39,9 @@ jobs:
         echo "branch coverage = ${{ steps.jacoco.outputs.branches }}"
     
     - name: Setup Git Credentials
-      uses: fusion-engineering/setup-git-credentials@v2.0.7
+      uses: fusion-engineering/setup-git-credentials@v2
+      with:
+        credentials: ${{secrets.GIT_CREDENTIALS}}
 
     - name: Commit the badge (if it changed)
       run: |
