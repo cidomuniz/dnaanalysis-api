@@ -1,4 +1,5 @@
 # simian-api
+![Coverage](.github/badges/jacoco.svg)
 
 <br>
 
