@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.cidoliveiraa.simianapi.domain.exception.InvalidDNAException;
 
-public record DNA(String id, List<String> sequence, boolean isSimian) {
+public record DNA(List<String> sequence) {
 
   public void validateSequence() throws InvalidDNAException {
     if (this.sequence == null || this.sequence.isEmpty())
