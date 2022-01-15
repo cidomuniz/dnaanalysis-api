@@ -28,4 +28,14 @@ public class DefaultDNARepository implements DNARepository {
         repository.save(dnaMapper.map(dna, com.cidoliveiraa.simianapi.adapter.repository.model.DNA.class)),
         DNA.class);
   }
+
+  @Override
+  public int countAllSimian() {
+    return repository.countAllByIsSimian(true);
+  }
+
+  @Override
+  public int countAllHuman() {
+    return repository.countAllByIsSimian(false);
+  }
 }

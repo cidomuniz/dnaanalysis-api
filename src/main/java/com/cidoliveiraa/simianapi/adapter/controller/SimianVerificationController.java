@@ -4,7 +4,7 @@ import com.cidoliveiraa.simianapi.adapter.controller.request.SimianVerificationR
 import com.cidoliveiraa.simianapi.adapter.controller.response.SimianVerificationResponse;
 import com.cidoliveiraa.simianapi.domain.entity.DNA;
 import com.cidoliveiraa.simianapi.domain.exception.InvalidDNAException;
-import com.cidoliveiraa.simianapi.usecase.VerifySimian;
+import com.cidoliveiraa.simianapi.usecase.SimianVerify;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,8 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/simian")
 public class SimianVerificationController {
   @Autowired
-  private VerifySimian verifySimian;
-
+  private SimianVerify verifySimian;
 
   @PostMapping
   public SimianVerificationResponse verifySimian(@RequestBody SimianVerificationRequest request) throws InvalidDNAException {

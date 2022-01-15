@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class VerifySimian {
+public class SimianVerify {
   @Autowired
   private DNARepository dnaRepository;
 
@@ -90,8 +90,10 @@ public class VerifySimian {
           charCount = 0;
         }
 
-        if (charCount > 3)
+        if (charCount > 3) {
           sequenceCount++;
+          charCount = 0;
+        }
 
         if (sequenceCount > 1)
           return sequenceCount;
@@ -139,8 +141,10 @@ public class VerifySimian {
         charCount = 0;
       }
 
-      if (charCount > 3)
+      if (charCount > 3) {
         sequenceCount++;
+        charCount = 0;
+      }
 
       if (sequenceCount > 1)
         return sequenceCount;
@@ -188,8 +192,10 @@ public class VerifySimian {
         charCount = 0;
       }
 
-      if (charCount > 3)
+      if (charCount > 3) {
         sequenceCount++;
+        charCount = 0;
+      }
 
       if (sequenceCount > 1)
         return sequenceCount;
