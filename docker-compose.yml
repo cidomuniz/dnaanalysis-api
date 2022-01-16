@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  mongo:
+    image: "mongo"
+    ports:
+      - "27017:27017"
+  app:
+    build: .
+    depends_on:
+      - mongo
+    command: java -jar /usr/local/lib/simian-api.jar
+    environment:
+        - DB=${DB}
+        - PORT=${PORT}
+        - HOST=${HOST}
+    ports:
+      - "8080:8080"
+    volumes:
+      - /usr/app
