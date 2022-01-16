@@ -77,9 +77,10 @@ jobs:
         ssh -o StrictHostKeyChecking=no -i private_key ${REMOTE_USER}@${REMOTE_HOST} '
         
           #Now we have got the access of EC2 and we will start the deploy .
-          cd /home/simian-api/app &&
+          cd /home/ec2-user/simian-api &&
           docker-compose -f docker-compose.prod.yml pull &&
           docker-compose -f docker-compose.prod.yml up -d --build 
+        '
 
 
 
