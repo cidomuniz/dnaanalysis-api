@@ -3,7 +3,7 @@
 
 * [Clean Architecture](#clean-architecture)
 * [Estrutura da Aplicação](#estrutura-da-aplicação)
-* [Pipelines e mais](#pipelines-e-mais)
+* [Pipelines, URL e mais](#pipelines-url-e-mais)
 * [Construindo e Executando a aplicação](#construindo-e-executando-a-aplicação)
 * [Documentação das Rotas](#documentação-das-rotas)
 
@@ -43,7 +43,7 @@
 
 ***
 
-## Pipelines e mais
+## Pipelines, URL e mais
 * DNS do servidor da aplicação na AWS: http://ec2-18-205-116-20.compute-1.amazonaws.com;
 * Pipeline simples de CI/CD com GitHub Actions: https://github.com/cidoliveiraa/simian-api/actions/workflows/ci-cd.yml;
 * Repositório no Docker Hub com imagens entregues pelo pipeline: https://hub.docker.com/r/cidoliveiraa/simian-api/tags;
@@ -63,7 +63,9 @@ docker-compose up -d
 ## Documentação das rotas
 ### Swagger
 * http://ec2-18-205-116-20.compute-1.amazonaws.com/swagger-ui/index.html
-#### `Efetuar verificação de Símio`
+### Actuator
+* http://ec2-18-205-116-20.compute-1.amazonaws.com/actuator/health
+### Efetuar verificação de Símio
 >`POST`
 >```
 > /simian
@@ -88,7 +90,7 @@ docker-compose up -d
 
 <br>
 
-#### `Estatísticas de verificações de DNA`
+### Estatísticas de verificações de DNA
 > `GET`
 >```
 >  /stats
