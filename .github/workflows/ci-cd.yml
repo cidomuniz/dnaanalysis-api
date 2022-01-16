@@ -53,7 +53,7 @@ jobs:
     - name: Build Docker Image
       run: docker build . --file Dockerfile --tag cidoliveiraa/simian-api:${{ github.event.release.tag_name }}
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/simian-api
+      run: docker push ${{secrets.DOCKER_USER}}/simian-api:${{ github.event.release.tag_name }}
 
   
 
