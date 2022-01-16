@@ -44,6 +44,7 @@
 ***
 
 ## Pipelines e mais
+* DNS do servidor da aplicação na AWS: http://ec2-18-205-116-20.compute-1.amazonaws.com;
 * Pipeline simples de CI/CD com GitHub Actions: https://github.com/cidoliveiraa/simian-api/actions/workflows/ci-cd.yml;
 * Repositório no Docker Hub com imagens entregues pelo pipeline: https://hub.docker.com/r/cidoliveiraa/simian-api/tags;
 ***
