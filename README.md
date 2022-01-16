@@ -1,5 +1,5 @@
 # simian-api
-![Coverage](.github/badges/jacoco.svg)
+[![Build](https://github.com/cidoliveiraa/simian-api/actions/workflows/maven.yml/badge.svg?branch=main)](https://github.com/cidoliveiraa/simian-api/actions/workflows/maven.yml) [![codecov](https://codecov.io/gh/cidoliveiraa/simian-api/branch/main/graph/badge.svg?token=RS3WR10R6U)](https://codecov.io/gh/cidoliveiraa/simian-api)
 
 <br>
 

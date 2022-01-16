@@ -74,7 +74,7 @@
 					<excludes>
 						<exclude>com/cidoliveiraa/simianapi/domain/**</exclude>
 						<exclude>com/cidoliveiraa/simianapi/adapter/**</exclude>
-						<exclude>com/cidoliveiraa/simianapi/SimianApiApplication.java</exclude>
+						<exclude>com/cidoliveiraa/simianapi/SimianApiApplication.class</exclude>
 					</excludes>
 				</configuration>
 			</plugin>
