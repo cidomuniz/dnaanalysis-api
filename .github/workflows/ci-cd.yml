@@ -63,7 +63,7 @@ jobs:
       uses: easingthemes/ssh-deploy@v2.2.11
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-        SOURCE: ${{ github.workspace }}/docker-compose.prod.yml
+        SOURCE: ./
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
         REMOTE_USER: ${{ secrets.REMOTE_USER }}
         TARGET: /home/ec2-user/simian-api
