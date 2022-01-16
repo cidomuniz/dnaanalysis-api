@@ -10,5 +10,5 @@ RUN mvn -f /home/app/pom.xml clean package
 #
 FROM openjdk:17-slim
 COPY --from=build /home/app/target/simian-api-0.0.1-SNAPSHOT.jar /usr/local/lib/simian-api.jar
-EXPOSE 8080
+EXPOSE 80
 ENTRYPOINT ["java","-jar","/usr/local/lib/simian-api.jar"]
