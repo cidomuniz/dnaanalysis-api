@@ -46,41 +46,10 @@ jobs:
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build Docker Image
-      run: docker build . --file Dockerfile -t cidoliveiraa/simian-api:latest -t cidoliveiraa/simian-api:${{ github.event.release.tag_name }}
+      run: docker build . --file Dockerfile -t cidoliveiraa/dnaanalysis-api:latest -t cidoliveiraa/dnaanalysis-api:${{ github.event.release.tag_name }}
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/simian-api --all-tags
-  
-  deploy:
-    if:  github.event_name == 'release'
-    runs-on: ubuntu-latest
-    needs: [publish]
-    permissions:
-      contents: read
-      packages: write
-    steps:
-    - uses: actions/checkout@v2
-    - name: ssh deploy
-      uses: easingthemes/ssh-deploy@v2.2.11
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-        SOURCE: ./
-        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-        REMOTE_USER: ${{ secrets.REMOTE_USER }}
-        TARGET: /home/ec2-user/simian-api
-    - name: Deploy in EC2
-      env:
-          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-      run: |
-        echo "$SSH_PRIVATE_KEY" > private_key && chmod 600 private_key
-        ssh -o StrictHostKeyChecking=no -i private_key ${REMOTE_USER}@${REMOTE_HOST} '
-        
-          #Now we have got the access of EC2 and we will start the deploy .
-          cd /home/ec2-user/simian-api &&
-          docker-compose -f docker-compose.prod.yml pull &&
-          docker-compose -f docker-compose.prod.yml up -d --build 
-        '
+      run: docker push ${{secrets.DOCKER_USER}}/dnaanalysis-api --all-tags
+
 
 
 

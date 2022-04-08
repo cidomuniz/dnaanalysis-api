@@ -6,7 +6,7 @@ services:
     ports:
       - "27017:27017"
   app:
-    image: "cidoliveiraa/simian-api"
+    image: "cidoliveiraa/dnaanalysis-api"
     depends_on:
       - mongo
     ports:
