@@ -1,5 +1,5 @@
-# simian-api
-[![CI/CD](https://github.com/cidoliveiraa/simian-api/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/cidoliveiraa/simian-api/actions/workflows/ci-cd.yml) [![codecov](https://codecov.io/gh/cidoliveiraa/simian-api/branch/main/graph/badge.svg?token=RS3WR10R6U)](https://codecov.io/gh/cidoliveiraa/simian-api)
+# dnaanalysis-api
+[![CI/CD](https://github.com/cidoliveiraa/dnaanalysis-api/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/cidoliveiraa/dnaanalysis-api/actions/workflows/ci-cd.yml) [![codecov](https://codecov.io/gh/cidoliveiraa/dnaanalysis-api/branch/main/graph/badge.svg?token=RS3WR10R6U)](https://codecov.io/gh/cidoliveiraa/dnaanalysis-api)
 
 * [Clean Architecture](#clean-architecture)
 * [Estrutura da Aplicação](#estrutura-da-aplicação)
@@ -44,9 +44,8 @@
 ***
 
 ## Pipelines, URL e mais
-* DNS do servidor da aplicação na AWS: http://ec2-18-205-116-20.compute-1.amazonaws.com;
-* Pipeline simples de CI/CD com GitHub Actions: https://github.com/cidoliveiraa/simian-api/actions/workflows/ci-cd.yml;
-* Repositório no Docker Hub com imagens entregues pelo pipeline: https://hub.docker.com/r/cidoliveiraa/simian-api/tags;
+* Pipeline simples de CI/CD com GitHub Actions: https://github.com/cidoliveiraa/dnaanalysis-api/actions/workflows/ci-cd.yml;
+* Repositório no Docker Hub com imagens entregues pelo pipeline: https://hub.docker.com/r/cidoliveiraa/dnaanalysis-api/tags;
 ***
 
 ## Construindo e Executando a Aplicação
@@ -62,9 +61,9 @@ docker-compose up -d
 
 ## Documentação das rotas
 ### Swagger
-* http://ec2-18-205-116-20.compute-1.amazonaws.com/swagger-ui/index.html
+* /swagger-ui/index.html
 ### Actuator
-* http://ec2-18-205-116-20.compute-1.amazonaws.com/actuator/health
+* /actuator/health
 ### Efetuar verificação de Símio
 >`POST`
 >```
