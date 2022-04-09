@@ -1,5 +1,5 @@
 # dnaanalysis-api
-[![CI/CD](https://github.com/cidoliveiraa/dnaanalysis-api/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/cidoliveiraa/dnaanalysis-api/actions/workflows/ci-cd.yml) [![codecov](https://codecov.io/gh/cidoliveiraa/dnaanalysis-api/branch/main/graph/badge.svg?token=RS3WR10R6U)](https://codecov.io/gh/cidoliveiraa/dnaanalysis-api)
+[![CI/CD](https://github.com/cidomuniz/dnaanalysis-api/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/cidomuniz/dnaanalysis-api/actions/workflows/ci-cd.yml) [![codecov](https://codecov.io/gh/cidomuniz/dnaanalysis-api/branch/main/graph/badge.svg?token=RS3WR10R6U)](https://codecov.io/gh/cidomuniz/dnaanalysis-api)
 
 * [Clean Architecture](#clean-architecture)
 * [Estrutura da Aplicação](#estrutura-da-aplicação)
@@ -44,8 +44,8 @@
 ***
 
 ## Pipelines, URL e mais
-* Pipeline simples de CI/CD com GitHub Actions: https://github.com/cidoliveiraa/dnaanalysis-api/actions/workflows/ci-cd.yml;
-* Repositório no Docker Hub com imagens entregues pelo pipeline: https://hub.docker.com/r/cidoliveiraa/dnaanalysis-api/tags;
+* Pipeline simples de CI/CD com GitHub Actions: https://github.com/cidomuniz/dnaanalysis-api/actions/workflows/ci-cd.yml;
+* Repositório no Docker Hub com imagens entregues pelo pipeline: https://hub.docker.com/r/cidomuniz/dnaanalysis-api/tags;
 ***
 
 ## Construindo e Executando a Aplicação
